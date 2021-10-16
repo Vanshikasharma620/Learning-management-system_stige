@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const app = express()
-const port = 3000
+const port =process.env.PORT ||3000
 const pathname=path.join(__dirname + "/public")
 const mongoose= require('mongoose')
 let b="mongodb+srv://lms:vanshika@cluster0.ex4nl.mongodb.net/lms?retryWrites=true&w=majority"
