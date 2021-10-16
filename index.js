@@ -4,7 +4,8 @@ const app = express()
 const port = 3000
 const pathname=path.join(__dirname + "/public")
 const mongoose= require('mongoose')
-mongoose.connect('mongodb://localhost:27017/lms');
+let b="mongodb+srv://lms:vanshika@cluster0.ex4nl.mongodb.net/lms?retryWrites=true&w=majority"
+mongoose.connect(b);
 var db=mongoose.connection;
 db.on('error',console.error.bind(console,"Connection error : "))
 db.once('open' , function (){
