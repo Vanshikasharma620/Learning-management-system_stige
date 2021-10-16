@@ -116,8 +116,8 @@ a {
   display: none;
 } */
 .form-box {
-  width: 463px;
-  height: 563px;
+  max-width: 463px;
+  min-height: 563px;
   position: relative;
   margin: 2% auto;
   background: black;
@@ -570,6 +570,7 @@ h6 {
   }
 }
 
+
 @media only screen and (max-width: 580px) {
   nav ul li a {
     text-decoration: none;
@@ -595,7 +596,7 @@ h6 {
   }
 
   #image img {
-    display: flex;
+    display: none;
     height: 200px;
     width: 200px;
     flex-direction: column;
