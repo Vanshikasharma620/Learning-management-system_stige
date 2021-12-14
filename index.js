@@ -58,17 +58,24 @@ app.get('/logout', (req, res) => {
 })
 
 app.post('/log', (req,res)=>{
-  res.sendFile(path.join(pathname + "/courses.html"))
-  const na=req.body.email;
+  try {
+    const na=req.body.email;
   const Kitten = mongoose.model('dd', kittySchema);
-  Kitten.find({email:na},(err,res)=>{
-    if (res[0].password===req.body.password){
-      console.log(res);
+  Kitten.find({email:na},(err,reso)=>{
+    if (reso[0].password===req.body.password){
       loged=true;
       
+  res.sendFile(path.join(pathname + "/courses.html"))
+      
+    }
+    else{
+      res.sendFile(path.join(pathname + "/index.html"))
     }
     
   })
+  } catch (error) {
+    console.log(error)
+  }
 })
 
 app.get('/api/get' ,async (req,res)=>{

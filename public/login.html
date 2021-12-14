@@ -4,24 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="full-page">
       <div class="navbar">
         <div id="logo">
-            <img src="lms-png-removebg-preview.png" alt="" srcset="" />
-          </div>
+          <img src="lms-png-removebg-preview.png" alt="" srcset="" />
+        </div>
         <nav>
           <ul id="MenuItems">
-            <li><a href="/">Home</a></li>
-            <li><a href="/logout">Logout</a></li>
-            <li>
-              <button
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Logout</a></li>
+            <li >
+              <button 
                 class="loginbtn"
                 onclick="document.getElementById('login-form').style.display='block'"
-                style="width: auto">Login/Signup</button>
+                style="width: auto"
+              >
+                Login/Signup
+              </button>
             </li>
           </ul>
         </nav>
@@ -30,14 +33,29 @@
         <div class="form-box">
           <div class="button-box">
             <div id="btn"></div>
-            <button type="button" onclick="login()" class="toggle-btn" style="color: yellowgreen;" >
+            <button
+              type="button"
+              onclick="login()"
+              class="toggle-btn"
+              style="color: yellowgreen"
+            >
               Log In
             </button>
-            <button type="button" onclick="register()" class="toggle-btn" style="color: yellowgreen;">
+            <button
+              type="button"
+              onclick="register()"
+              class="toggle-btn"
+              style="color: yellowgreen"
+            >
               Signup
             </button>
           </div>
-          <form id="login" class="input-group-login" action="/log" method="POST">
+          <form
+            id="login"
+            class="input-group-login"
+            action="/log"
+            method="POST"
+          >
             <input
               type="text"
               class="input-field"
@@ -57,10 +75,18 @@
             >
             <button type="submit" class="submit-btn">Log in</button>
           </form>
-          <form id="register" class="input-group-register" action="/signup" method="POST">
-
-            
-      <input type="file" class="input-field" name="pic" accept="image/*">
+          <form
+            id="register"
+            class="input-group-register"
+            action="/signup"
+            method="POST"
+          >
+            <input
+              type="file"
+              class="input-field"
+              name="pic"
+              accept="image/*"
+            />
             <input
               type="text"
               class="input-field"
